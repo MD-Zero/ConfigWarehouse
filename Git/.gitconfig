@@ -1,0 +1,7 @@
+[user]
+	email = mdufourpro@gmail.com
+	name = Matthieu Dufour
+[push]
+	default = simple
+[core]
+	editor = vim
