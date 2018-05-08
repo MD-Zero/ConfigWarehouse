@@ -1,12 +1,8 @@
-"
-"             d8b
-"             Y8P
-"
-"    888  888 888 88888b.d88b.  888d888 .d8888b
-"    888  888 888 888 "888 "88b 888P"  d88P"
-"    Y88  88P 888 888  888  888 888    888
-" d8b Y8bd8P  888 888  888  888 888    Y88b.
-" Y8P  Y88P   888 888  888  888 888     "Y8888P
+"        _
+" __   _(_)_ __ ___  _ __ ___
+" \ \ / / | '_ ` _ \| '__/ __|
+"  \ V /| | | | | | | | | (__
+" (_)_/ |_|_| |_| |_|_|  \___|
 "
 
 " Tab stops
@@ -35,3 +31,6 @@ set listchars=tab:»·,trail:·
 
 " Remove all trailing whitespace by pressing F5
 nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+
+" Commit files helper
+autocmd Filetype gitcommit setlocal spell textwidth=72
