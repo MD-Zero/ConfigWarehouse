@@ -1,11 +1,5 @@
-#    _               _              _ _
-#   | |__   __ _ ___| |__      __ _| (_) __ _ ___  ___  ___
-#   | '_ \ / _` / __| '_ \    / _` | | |/ _` / __|/ _ \/ __|
-#  _| |_) | (_| \__ \ | | |  | (_| | | | (_| \__ \  __/\__ \
-# (_)_.__/ \__,_|___/_| |_|___\__,_|_|_|\__,_|___/\___||___/
-#                        |_____|
-#
+# .bash_aliases
 
-alias ll="LC_COLLATE=C ls -Alh --color=auto"
+alias ll="LC_COLLATE=C ls -Al --color=auto --group-directories-first"
 alias ..="cd .."
 alias tree="tree -CF --dirsfirst"
