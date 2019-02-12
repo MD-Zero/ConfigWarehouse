@@ -28,9 +28,9 @@ shopt -s checkwinsize
 # User specific environment
 export PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 
-# Go
+# Golang
 export GOPATH="$HOME/Workspace/go"
 export PATH="$PATH:$(go env GOPATH)/bin"
 
-# Fancy prompt.
-export PS1="╮╭─ \w\n╯╰─ \t ─ \$ "
+# Fancy prompt
+export PS1="╭─(\[$(tput setaf 2)\]\t\[$(tput sgr0)\]) \w\n╰─\$ "
