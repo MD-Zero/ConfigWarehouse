@@ -33,4 +33,4 @@ export GOPATH="$HOME/Workspace/go"
 export PATH="$PATH:$(go env GOPATH)/bin"
 
 # Fancy prompt
-export PS1="╭─(\[$(tput setaf 2)\]\t\[$(tput sgr0)\]) \w\n╰─\$ "
+export PS1="╭─(\[$(tput setaf 3)\]\t\[$(tput sgr0)\]) \w\n╰─\$ "

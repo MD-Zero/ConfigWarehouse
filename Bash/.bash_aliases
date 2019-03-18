@@ -2,6 +2,7 @@
 
 alias ll="LC_COLLATE=C ls -Al --color=auto --group-directories-first"
 alias ..="cd .."
-alias tree="tree -CF --dirsfirst"
+alias tree="tree -aCF --dirsfirst -I 'node_modules|.git'"
 
-alias cddumb="cd ~/Workspace/go/src/bitbucket.org/maad-5/dumb"
+alias cdcore="cd $GOPATH/src/bitbucket.org/maad-5/dumb-core"
+alias cdui="cd $GOPATH/src/bitbucket.org/maad-5/dumb-ui"
