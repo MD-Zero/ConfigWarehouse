@@ -5,32 +5,27 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-# Enable bash completion in interactive shells
-if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-        . /etc/bash_completion
-fi
-
-# Alias definitions
-if [ -f ~/.bash_aliases ]; then
-        . ~/.bash_aliases
-fi
-
-# Don't put duplicate lines or lines starting with space in the history
-HISTCONTROL=ignoreboth:erasedups
-
-# Append to the history file, don't overwrite it
-shopt -s histappend
-
-# Check the window size after each command and, if necessary, update the values
-# of LINES and COLUMNS
-shopt -s checkwinsize
-
 # User specific environment
-export PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
+then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
+export PATH
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
+alias ll="LC_COLLATE=C ls -Al --color=auto --group-directories-first"
+alias ..="cd .."
+alias tree="tree -aCF --dirsfirst -I 'node_modules|.git'"
 
 # Golang
-export GOPATH="$HOME/Workspace/go"
+export GOPATH="$HOME/Projects/go"
 export PATH="$PATH:$(go env GOPATH)/bin"
+
+alias cdc="cd $GOPATH/src/gitlab.com/maad-5/dumbcore"
+alias cdu="cd $GOPATH/src/gitlab.com/maad-5/dumbui"
 
 # Fancy prompt
 export PS1="╭─(\[$(tput setaf 3)\]\t\[$(tput sgr0)\]) \w\n╰─\$ "
