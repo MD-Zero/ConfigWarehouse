@@ -12,20 +12,17 @@ then
 fi
 export PATH
 
-# Uncomment the following line if you don't like systemctl's auto-paging feature:
-# export SYSTEMD_PAGER=
-
 # User specific aliases and functions
-alias ll="LC_COLLATE=C ls -Al --color=auto --group-directories-first"
-alias ..="cd .."
-alias tree="tree -aCF --dirsfirst -I 'node_modules|.git'"
+if [ -f ~/.bash_aliases ]; then
+	. ~/.bash_aliases
+fi
 
 # Golang
-export GOPATH="$HOME/Projects/go"
+export GOPATH="$HOME/.go"
 export PATH="$PATH:$(go env GOPATH)/bin"
 
-alias cdc="cd $GOPATH/src/gitlab.com/maad-5/dumbcore"
-alias cdu="cd $GOPATH/src/gitlab.com/maad-5/dumbui"
+# Commands history
+export HISTCONTROL=ignoreboth:erasedups
 
 # Fancy prompt
 export PS1="╭─(\[$(tput setaf 3)\]\t\[$(tput sgr0)\]) \w\n╰─\$ "
