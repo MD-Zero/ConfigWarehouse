@@ -1,7 +1,6 @@
 {
+	"auto_complete_cycle": true,
 	"bold_folder_labels": true,
-	"caret_extra_bottom": 0,
-	"caret_extra_top": 0,
 	"ensure_newline_at_eof_on_save": true,
 	"folder_exclude_patterns":
 	[
@@ -9,12 +8,9 @@
 		".git",
 		".hg",
 		"CVS",
-		"node_modules",
-		"vendor"
+		"node_modules"
 	],
-	"highlight_line": true,
 	"highlight_modified_tabs": true,
-	"remember_full_screen": true,
 	"rulers":
 	[
 		80,
@@ -23,6 +19,8 @@
 	"show_encoding": true,
 	"show_line_endings": true,
 	"spell_check": true,
+	"tab_size": 2,
+	"theme": "Default.sublime-theme",
 	"trim_trailing_white_space_on_save": true,
 	"word_wrap": false
 }
