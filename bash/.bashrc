@@ -12,14 +12,13 @@ then
 fi
 export PATH
 
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
 # User specific aliases and functions
 if [ -f ~/.bash_aliases ]; then
 	. ~/.bash_aliases
 fi
-
-# Golang
-export GOPATH="$HOME/.go"
-export PATH="$PATH:$(go env GOPATH)/bin"
 
 # Commands history
 export HISTCONTROL=ignoreboth:erasedups
