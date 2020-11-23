@@ -1,4 +1,4 @@
 
-# ConfigWarehouse #
+# Home config #
 
-Holds pieces of configuration files, of any sort.
+"Home" configuration files, living under `~`.
